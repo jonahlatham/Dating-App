@@ -17,6 +17,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Logging;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace DatingApp.API
 {
@@ -73,8 +74,6 @@ namespace DatingApp.API
             app.UseAuthorization ();
 
             app.UseAuthentication ();
-
-            app.UseMvc ();
 
             app.UseEndpoints (endpoints =>
             {
